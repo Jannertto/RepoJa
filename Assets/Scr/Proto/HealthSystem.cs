@@ -43,11 +43,11 @@ namespace AD1762Proto
         {
             healthPoint -= iDamage;
             Debug.Log(gameObject.name + " took " + iDamage + " amount of damage and now has " + healthPoint + " amount of health");
-            if (healthPoint <= 0)
+            if (healthPoint <= 0 && gameObject.tag != "Player")
             {
                 Destroy(gameObject);
             }
-            if (gameObject.name == "Player")
+            if (gameObject.tag == "Player")
             {
                 //add ui interface here.
             }
